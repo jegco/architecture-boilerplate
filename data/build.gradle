@@ -11,11 +11,10 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile("org.springframework.boot:spring-boot-starter-security")
-    compile group: 'org.springframework.security.oauth', name: 'spring-security-oauth2', version: '2.3.3.RELEASE'
-    compile group: 'org.springframework.security', name: 'spring-security-jwt', version: '1.0.9.RELEASE'
-    compile 'io.rest-assured:json-path:3.1.1'
-    compile 'io.rest-assured:rest-assured:3.1.1'
-    compile 'com.auth0:java-jwt:3.4.0'
+    implementation group: 'junit', name: 'junit', version: '4.12'
+    implementation 'io.rest-assured:json-path:3.1.1'
+    implementation 'io.rest-assured:rest-assured:3.1.1'
+    implementation 'com.auth0:java-jwt:3.4.0'
+
+    implementation group: 'org.springframework', name: 'spring-context', version: '3.0.2.RELEASE'
 }

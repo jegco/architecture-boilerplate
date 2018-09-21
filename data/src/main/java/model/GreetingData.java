@@ -1,11 +1,11 @@
 package model;
 
-public class Greeting {
+public class GreetingData {
 
     private long id;
     private String content;
 
-    public Greeting(long id, String content) {
+    public GreetingData(long id, String content) {
         this.id = id;
         this.content = content;
     }

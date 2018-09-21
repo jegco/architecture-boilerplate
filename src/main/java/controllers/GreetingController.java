@@ -9,22 +9,18 @@ import org.springframework.web.bind.annotation.RestController;
 import usecases.base.ICompletableUseCase;
 import usecases.base.IUseCase;
 
-import java.util.concurrent.atomic.AtomicLong;
-
 
 @RestController
 public class GreetingController {
 
     @Autowired
-    ICompletableUseCase mGreetingUseCase;
+    private ICompletableUseCase mGreetingUseCase;
 
     @Autowired
+    private
     IUseCase<Greeting, Object> mGreetinh2UseCase;
 
     private CompositeDisposable mSubscriptions = new CompositeDisposable();
-
-    private static final String template = "Hello, %s!";
-    private final AtomicLong counter = new AtomicLong();
 
     @RequestMapping("/greeting")
     public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
