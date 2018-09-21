@@ -28,7 +28,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
         http.requestMatchers()
                 .and()
                 .authorizeRequests()
-                .antMatchers("/login", "http://localhost:8080/oauth/token").permitAll()
+                .antMatchers("/login", "/greeting2/completable", "http://localhost:8080/oauth/token").permitAll()
                 .antMatchers("/greeting").authenticated();
     }
 }
